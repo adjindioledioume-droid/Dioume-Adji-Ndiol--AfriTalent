@@ -17,22 +17,39 @@ rel="stylesheet">
     <!-- Le contenu de la page sera ajoute ici --> 
 <header>
 <!-- Navbar CLAIRE -->
-<nav class="navbar navbar-expand-lg">
-  <img src="images/WhatsApp Image 2026-05-01 at 19.04.56.jpeg" height="50px">
+<nav class="navbar navbar-expand-lg fixed top" id="phto">
   <div class="container">
-    <a class="navbar-brand" href="#">MonSite</a>
-    <div class="navbar-nav ms-auto">
-      <a class="nav-link active" href="index.html">Accueil</a>
-      <a class="nav-link active" href="freelances.html">Freelance</a>
-      <a class="nav-link active" href="tarifs.html">Tarif</a>
-      <a class="nav-link" href="about.html">À propos</a>
-      <a class="nav-link" href="contact.html">Contact</a>
+    <a  class="navbar-brand d-flex align-items-center gap-2" href="index.html"></a>
+    <img src="images/WhatsApp Image 2026-05-01 at 19.04.56.jpeg" height="50px">
+
+      <!-- Bouton hamburger mobile -->
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+        aria-controls="navMenu"
+          aria-expanded="false"
+        aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <a class="navbar-brand" href="#">AfriTalent</a>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" href="index.html">Accueil</a>
+        <a class="nav-link" href="freelances.html">Freelance</a>
+        <a class="nav-link" href="tarifs.html">Tarif</a>
+        <a class="nav-link" href="blog.html">blog</a>
+        <a class="nav-link" href="about.html">À propos</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary btn-lg">Rejoindre AfriTalent</a>
+      </div>
     </div>
   </div>
 </nav>
   
+  
 </header>
-    <section id="histoire" aria-label="Histoire d'AfriTalent">
+    <section id="histoire" aria-label="Histoire d'AfriTalent ">
       <div class="container">
         <div class="histoire-content fade-in">
           <div class="histoire-text">
@@ -42,8 +59,8 @@ rel="stylesheet">
             <p>Depuis nos débuts, nous travaillons à créer un espace accessible où créativité, apprentissage et collaboration se rencontrent.</p>
             <p>Aujourd’hui, Afritalent accompagne étudiants, entrepreneurs et professionnels dans le développement de leurs compétences digitales et la réalisation de leurs projets.</p>
           </div>
-          <div class="">
-            <img src="" alt="">
+          <div class="histoire-image">
+           <img src="images/210191507604701517.jpeg" alt="Notre Histoire">
           </div>
         </div>
       </div>
@@ -53,13 +70,13 @@ rel="stylesheet">
   <div>
     <div>
 
-    <section id="equipe" aria-label="L'équipe AfriTalent">
+    <section id="equipe" >
       <div class="container">
         <h2 class="section-title text-center fade-in">Notre Équipe</h2>
         <p class="section-subtitle text-center fade-in">Les personnes derrière la plateforme.</p>
         <div class="row g-4 justify-content-center">
 
-          <div class="col-12 col-md-6 col-lg-3 fade-in">
+          <div class="col-12 col-md-6 col-lg-3 fade-in equipe">
             <div class="team-card">
               <img src="images/télécharger (17).jpeg" alt="Ndeye Aziz, co-fondateur et CEO" class="team-avatar" height="50px">
               <div class="team-info">
@@ -110,7 +127,7 @@ rel="stylesheet">
               <div class="team-info">
                 <h3>Amar Diallo</h3>
                 <p class="team-role">Responsable Marketing</p>
-                <p class="team-bio">Stratège digital passionné par la croissance des communautés tech africaines.</p>
+                <p class="team-bio">Stratège digital passionné par la croissance des communautés tech.</p>
                 <div class="team-social">
                   <a href="#" aria-label="LinkedIn d'Amar Diallo"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
                   <a href="#" aria-label="Instagram d'Amar Diallo"><i class="bi bi-instagram" aria-hidden="true"></i></a>
@@ -128,14 +145,14 @@ rel="stylesheet">
 
 
 
- <section id="equipe" aria-label="L'équipe AfriTalent">
+ <section id="nos valeurs" >
       <div class="container">
         <h2 class="section-title text-center fade-in">Nos valeurs</h2>
         <p class="section-subtitle text-center fade-in">Des valeurs fortes aux coeur d'Afritalent</p>
-        <div class="row g-4 justify-content-center">
+        <div class="valeurs">
 
-          <div class="col-12 col-md-6 col-lg-3 fade-in">
-            <div class="team-card">
+          <div class="valeur">
+            <div class="team-card1">
              <img src="images/robotic profile artificial.jpeg" height="50px">
               <div class="team-info">
                 <h3>Innovation</h3>
@@ -144,8 +161,8 @@ rel="stylesheet">
             </div>
           </div>
 
-          <div class="col-12 col-md-6 col-lg-3 fade-in">
-           <div class="team-card">
+          <div class="valeur">
+           <div class="team-card1">
              <img src="images/NexAlign.jpeg" height="50px">
               <div class="team-info">
                 <h3>Accessibilité</h3>
@@ -154,8 +171,8 @@ rel="stylesheet">
             </div>
           </div>
 
-          <div class="col-12 col-md-6 col-lg-3 fade-in">
-            <div class="team-card">
+          <div class="valeur">
+            <div class="team-card1">
             <img src="images/télécharger (22).jpeg" height="50px"> 
               <div class="team-info">
                 <h3>communauté</h3>
@@ -164,8 +181,8 @@ rel="stylesheet">
             </div>
           </div>
 
-          <div class="col-12 col-md-6 col-lg-3 fade-in">
-            <div class="team-card">
+          <div class="valeur">
+            <div class="team-card1">
             <img src="images/télécharger (23).jpeg" height="50px"> 
               <div class="team-info">
                 <h3>Excellence</h3>
@@ -181,31 +198,24 @@ rel="stylesheet">
         </div>
     </section>
 
-    <section>
-      <h2 class="section-title text-center fade-in">Chiffres Cles</h2>
-      <div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="col-6 col-md-4">
-         <p class="stat-number" data-target="1000">+0</p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="col-6 col-md-4">
-         <p class="stat-number" data-target="1500">+0</p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="col-6 col-md-4">
-         <p class="stat-number" data-target="2000">+0</p>
-      </div>
-    </div>
-  </div>
-</div>
+
+    <section class="chiffres-cles">
+        <h2 class="section-title text-center fade-in">Chiffres cles</h2>
+        <div class="row stats-row mt-5 text-center">
+          <div class="col-6 col-md-4">
+            <p class="stat-number" data-target="500">+0</p>
+          </div>
+          <div class="col-6 col-md-4 ">
+            <p class="stat-number" data-target="800">+0</p>
+          </div>
+          <div class="col-6 col-md-4">
+            <p class="stat-number" data-target="1000">+0</p>
+          </div>
+        </div>
     </section>
 
     <footer class="footer">
-      <div class="container">
+      <div class="footer1">
         <div class="row g-4">
           <div class="col-md-6 col-lg-3">
             <a class="d-inline-flex align-items-center gap-2 text-decoration-none text-body" href="index.html">
