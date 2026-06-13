@@ -21,18 +21,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body{
+    overflow-x: hidden;
+    max-width: 100%;
+}
 img{
     max-width: 100%;
     display: block;
 }
 body{
+    padding-top: 76px;
     font-family: var(--font-body);
     background-color: var(--light-grad);
     color: var(--text-main);
     line-height: 1.6;
 }
 nav#phto{
-   background-color: var(--second-color);
+    background-color: var(--second-color);
+    padding: 12px 20px;
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
+    /* C'est pour que le JS contrôle la couleur librement et qu'il ajoute aussi la transition pour que le changement soit fluide. */
+    transition: background-color 0.3s ease, padding 0.3s ease;
+}
+nav#phto.scrolled{
+   background-color: #023e8a;
    padding: 12px 20px;
    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
 }
@@ -70,6 +82,9 @@ nav#phto{
     min-height: 100vh;
     display: flex;
     align-items: center;
+    margin-top: -76px;
+    padding-top: -76px;
+    /* le - c'est pour garder l'image intacte */
     
 }
 .hero-title{
@@ -248,7 +263,7 @@ nav#phto{
 /* freelances */
 .centre{
     text-align: center;
-    padding: 60px 20px 30px;
+    padding: 20px 30px;
 }
 .centre h1{
     font-size: 2.5rem;
@@ -256,7 +271,6 @@ nav#phto{
 }
 .centre p{
     color: gray;
-    margin-top: 10px;
 }
 /* sectionn tarif */
 .div1{
@@ -493,11 +507,20 @@ nav#phto{
 .footer1 a:hover{
     color: var(--dark-color);
 }
-.backToTop{
+#backToTop{
+    display: none;
    position: fixed;
    bottom: 30px;
+   right: 30px;
    background-color: var(--dark-color);
    border: none;
+   color: white;
+   border-radius: 50%;
+   width: 45px;
+   height: 45px;
+   font-size: 1.5rem;
+   cursor: pointer;
+   z-index: 999;
 }
 /* tablette */
 @media screen and (max-width:768px){
@@ -589,4 +612,54 @@ nav#phto > img {
     .valeur{
         grid-template-columns: repeat(4, 1fr);
     }
+}
+/* dark mode */
+body.dark-mode{
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+}
+body.dark-mode nav#phto{
+    background-color: #1a1a2e;
+}
+body.dark-mode .team-card,
+body.dark-mode .valeur{
+    background-color: #1e1e2e;
+    color: #f0f0f0;
+}
+/* dark mode a propos */
+body.dark-mode #histoire{
+background-color: #0d0d0d;
+}
+body.dark-mode .histoire-text p {
+    color: gray;
+}
+body.dark-mode .chiffres-cles{
+    background-color: #0d0d0d;
+}
+body.dark-mode .chiffres-cles > div {
+    background-color: #1e1e2e;
+    box-shadow: 0 4px 10px rgb(255, 255, 255, 0.5);
+}
+body.dark-mode .stat-number{
+    color: var(--second-color);
+}
+body.dark-mode .section-title{
+    color: #ffffff;
+}
+/* dark mode de tarifs */
+body.dark-mode .div2 .pricing-card{
+    background-color: #1e1e2e;
+    color: #f0f0f0;
+}
+body.dark-mode .div2 .pricing-featured{
+    background-color: #023e8a;
+}
+body.dark-mode .tarif{
+    background-color: #0d0d0d;
+}
+body.dark-mode .price-period{
+    color: gray;
+}
+body.dark-mode .pricing-features li{
+    color: #f0f0f0;
 }
