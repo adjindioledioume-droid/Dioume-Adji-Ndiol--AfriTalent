@@ -58,14 +58,14 @@ nav#phto.scrolled{
     color: var(--dark-color);
     font-size: 1.4rem;
 }
-.navbar-link{
+.nav-link{
     font-family: var(--dark-color);
     font-weight: 500;
     transition: 0.3s;
     padding: 6px 10px;
 }
-.navbar-link:hover{
-    color: var(--primary-color);
+.nav-link:hover{
+    color: white;
 }
 /* hamburger couleur */
 .navbar-toggler{
@@ -494,6 +494,16 @@ nav#phto.scrolled{
 }
 .gauche a, .droite p, address{
     color: var(--primary-color);
+}
+/* commit 7 fade in */
+.fade-in{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible{
+    opacity: 1;
+    transform: translateY(0);
 }
 /* pied de page */
 .footer1{

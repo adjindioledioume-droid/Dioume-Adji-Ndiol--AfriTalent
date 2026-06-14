@@ -49,4 +49,48 @@ document.addEventListener('DOMContentLoaded', ()=>{
             });
         });
     }
+
+    // compteurs animes
+    const statNumbers = document.querySelectorAll('.stat-number');
+        // determine quand l;element .stat-number devient visible
+    const counterObserver = new IntersectionObserver((entries) =>{
+        entries.forEach(entry =>{
+            if (entry.isIntersecting){
+                const element = entry.target;
+                const target = parseInt(element.getAttribute('data-target'));
+                let count = 0;
+                // 100 etapes pour atteindre la cible
+                // step calcule de combien augmente a chaque tour pour faire 100 etapes
+                const step = Math.ceil(target / 100);  
+                    // setIntrval repete l'incrementation toutes les 20ms jusqu'a atteindre target
+                const interval = setInterval(() => {
+                    count += step ;
+                    if(count >= target){
+                        count = target;
+                        clearInterval(interval);
+                    }
+                    // tous les 20ms
+                    element.textContent = '+' + count; 
+                }, 20);
+                        // unobserve arrete de surveiller cet element 
+                    counterObserver.unobserve(element);
+                }
+        });
+            
+    });
+    statNumbers.forEach(stat => counterObserver.observe(stat));
+
+    // aminations fade-in
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const fadeObserver = new IntersectionObserver((entries) =>{
+        entries.forEach(entry => {
+            if (entry.isIntersecting){
+                entry.target.classList.add('visible');
+                fadeObserver.unobserve(entry.target);
+            }
+        });
+    });
+    fadeElements.forEach(el => fadeObserver.observe(el));
 });
+
